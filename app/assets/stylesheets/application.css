@@ -43,3 +43,14 @@ footer {
   font-weight: bold;
   letter-spacing: 0.15em;
 }
+
+.btn-default >.badge-notify{
+  background:red;
+  position:relative;
+  top: 7px;
+  left: -40px;
+}
+
+.no-wrap {
+  display: inline-block;
+}
