@@ -6,9 +6,14 @@
   </div>
   <div class="col-md-offset-0 col-md-6 col-xs-offset-1 col-xs-10">
     <h3><%= @item.name %></h3>
-    <div class="buttons text-center">
+    <div class="no-wrap">
       <%= render 'ownerships/want_button', item: @item %>
     </div>
-    <p class="pull-right"><%= link_to '楽天詳細ページ >>', @item.url, target: '_blank' %></p>
+    <div class="no-wrap">
+      <%= render 'ownerships/cart_button', item: @item %>
+    </div>
+    <div>
+      <p class="pull-right"><%= link_to '楽天詳細ページ >>', @item.url, target: '_blank' %></p>
+    </div>
   </div>
 </div>

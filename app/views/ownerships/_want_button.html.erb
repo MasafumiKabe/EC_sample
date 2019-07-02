@@ -2,12 +2,16 @@
   <%= form_tag(ownership_path(item.id), method: :delete) do %>
     <%= hidden_field_tag :item_id, item.id %>
     <%= hidden_field_tag :type, 'Want' %>
-    <%= submit_tag '外す', class: 'btn btn-success' %>
+    <%= button_tag type: "submit", class: "btn btn-md" do %>
+      <i class="fas fa-star my-yellow fa-2x"></i>
+    <% end %>
   <% end %>
 <% else %>
   <%= form_tag(ownerships_path) do %>
     <%= hidden_field_tag :item_code, item.code %>
     <%= hidden_field_tag :type, 'Want' %>
-    <%= submit_tag 'ほしい', class: 'btn btn-primary' %>
+    <%= button_tag type: "submit", class: "btn btn-md" do %>
+      <i class="far fa-star fa-2x"></i>
+    <% end %>
   <% end %>
 <% end %>

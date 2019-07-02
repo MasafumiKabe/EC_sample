@@ -41,7 +41,7 @@ footer {
   letter-spacing: 0.15em;
 }
 
-.btn-default >.badge-notify{
+.badge-notify{
   background:red;
   position:relative;
   top: 7px;
@@ -106,4 +106,9 @@ p.item-title {
 }
 .user-profile .status ul li .status-value {
   font-size: 18px;
+}
+
+.my-yellow {color: #ffd700}
+.no-wrap {
+  display: inline-block;
 }
