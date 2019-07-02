@@ -32,14 +32,16 @@
                 <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
               </ul>
             </li>
-            <a href="#" class="btn btn-default btn-lg btn-link" style="text-decoration: none;font-size:25px;">
-              <span class="glyphicon glyphicon-shopping-cart"></span>
-              <% if current_user.want_items.present? %>
-                <span class="badge badge-notify">
-                  <%= current_user.want_items.count %>
-                </span>
+            <li style="text-decoration: none;font-size:25px;">
+              <%= link_to cart_path(current_user) do %>
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                <% if current_user.cart_items.present? %>
+                  <span class="badge badge-notify">
+                  <%= current_user.cart_items.count %>
+                  </span>
+                <% end %>
               <% end %>
-            </a>
+            </li>
           <% else %>
             <li><%= link_to "会員登録", new_user_registration_path %></li>
             <li><%= link_to "ログイン", new_user_session_path %></li>

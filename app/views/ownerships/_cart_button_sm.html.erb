@@ -1,0 +1,9 @@
+<% if current_user.cart?(item) %>
+  <%= form_tag(ownership_path(item.id), method: :delete) do %>
+    <%= hidden_field_tag :item_id, item.id %>
+    <%= hidden_field_tag :type, 'Cart' %>
+    <%= button_tag type: "submit", class: "btn btn-md btn-danger" do %>
+      <i class="fas fa-trash-alt fa-lg"></i>
+    <% end %>
+  <% end %>
+<% end %>

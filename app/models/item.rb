@@ -8,4 +8,6 @@ class Item < ApplicationRecord
   has_many :users, through: :ownerships
   has_many :wants
   has_many :want_users, through: :wants, source: :user
+  has_many :carts
+  has_many :cart_users, through: :carts, source: :user
 end

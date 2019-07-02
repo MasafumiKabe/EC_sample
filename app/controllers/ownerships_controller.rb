@@ -12,6 +12,9 @@ class OwnershipsController < ApplicationController
     if params[:type] == 'Want'
       current_user.want(@item)
       flash[:success] = 'ほしいものリストに追加しました。'
+    elsif params[:type] == 'Cart'
+      current_user.cart(@item)
+      flash[:success] = 'カートに追加しました。'
     end
 
     redirect_back(fallback_location: root_path)
@@ -23,6 +26,9 @@ class OwnershipsController < ApplicationController
     if params[:type] == 'Want'
       current_user.unwant(@item) 
       flash[:success] = 'ほしいものリストから削除しました。'
+    elsif params[:type] == 'Cart'
+      current_user.uncart(@item)
+      flash[:success] = 'カートから削除しました。'
     end
 
     redirect_back(fallback_location: root_path)

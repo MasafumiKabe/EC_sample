@@ -1,0 +1,30 @@
+<div class="user-profile">
+  <div class="status text-center">
+    <ul>
+      <li>
+        <div class="status-label">カート</div>
+        <div id="want_count" class="status-value">
+          <%= @count_cart %> 件
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<% if @items.present? %>
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+    <table class="table">
+      <tbody>
+        <% @items.each do |item| %>
+          <tr>
+            <td><img src="<%= item.image_url %>" alt="" width="80px"></td>
+            <td><%= link_to item.name, item %></td>
+            <td><%= render 'ownerships/cart_button_sm', item: item %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    </div>
+  </div>
+<% end %>
