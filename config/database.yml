@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: ec_sample_production
   username: ec_sample
   password: <%= ENV['EC_SAMPLE_DATABASE_PASSWORD'] %>

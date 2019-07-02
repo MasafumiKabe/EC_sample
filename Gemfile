@@ -62,3 +62,7 @@ gem 'dotenv-rails'
 
 gem 'rails_admin'
 gem 'cancancan'
+
+group :production do
+  gem 'pg', '0.21.0'
+end
