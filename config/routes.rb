@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   root to: 'toppages#index'
   resources :users, only: [:show]
 
-  resources :items, only: [:new]
+  resources :items, only: [:show, :new]
+  resources :ownerships, only: [:create, :destroy]
 end
