@@ -1,4 +1,4 @@
-# EC Sample
+# EC_Sample
 ## 概要
 楽天APIを用いたECサイト風のサイト
 ## 言語とライブラリ
